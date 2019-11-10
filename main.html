@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shiny spoon!</title>
+</head>
+<body>
+<text>
+I love doing this.
+</text>
+<script>
+var myWorker=new SharedWorker('worker.js');
+myWorker.port.start();
+onmessage=function(r){window.r=r;};
+postMessage('');
+myWorker.dispatchEvent(r);
+console.log('I am finished starting the worker.');
+</script>
+</body>
+</html>
