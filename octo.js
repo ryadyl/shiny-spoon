@@ -1,10 +1,1 @@
-onmessage=function(e){console.log(e)};
-console.log('hi there!');
-console.log(self);
-console.log(self.clients);
-var g=new BroadcastChannel('g');
-g.postMessage('windowl');
-console.log(clients.claim);
-setTimeout(function() {
-    var p;
-}, (600*1000));
+globalThis.onmessage=function(e){console.log("I have recieved a message."); console.log("Here it is!"); console.log(e); globalThis.x=e.source; console.log(globalThis.x);};
