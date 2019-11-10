@@ -8,7 +8,7 @@
 I love doing this.
 </text>
 <script>
-var myWorker=new SharedWorker('worker.js');
+var myWorker=new SharedWorker('octo.js');
 myWorker.port.start();
 onmessage=function(r){window.r=r;};
 postMessage('');
